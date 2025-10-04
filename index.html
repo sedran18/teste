@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquivo com nome genérico</title>
+    <title>Minha Primeira Página Web</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <div class="container">
+        <h1>Bem-vindo ao Meu Site!</h1>
+        <p>Este é um site simples, criado com HTML e CSS para a estrutura e estilo, e um toque de JavaScript para interatividade.</p>
+        
+        <button id="meuBotao" class="btn">Clique em Mim</button>
+        
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        // 1. Pega os elementos do HTML que vamos usar
+        const botao = document.getElementById('meuBotao');
+        const elementoMensagem = document.getElementById('mensagem');
+
+        // 2. Adiciona um "ouvinte" de evento para o clique no botão
+        botao.addEventListener('click', function() {
+            // 3. O que acontece quando o botão é clicado
+            elementoMensagem.textContent = 'Você conseguiu! O JavaScript funcionou! ✨';
+        });
+    </script>
+
 </body>
 </html>
